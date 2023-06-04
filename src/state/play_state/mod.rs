@@ -202,6 +202,7 @@ impl PlayState {
 
                     return Some(Event::PlaySound(Sfx::Select));
                 }
+                Event::None => {},
                 _ => {
                     unreachable!();
                 }

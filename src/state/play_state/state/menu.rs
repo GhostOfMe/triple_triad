@@ -79,7 +79,7 @@ impl Menu {
                 rect: Rect {
                     x: MENU_BG_POS[0] + 25.0,
                     y: 20.0 + consts::FONT_SIZE + f32::from(i_small) * (consts::FONT_SIZE + 5.0),
-                    w: 60.0,
+                    w: label.len() as f32 * 10.0,
                     h: consts::FONT_SIZE,
                 },
                 callback: Event::ChangeRule(*rule),
@@ -94,7 +94,7 @@ impl Menu {
             rect: Rect::new(
                 MENU_BG_POS[0] + 10.0,
                 20.0 + consts::FONT_SIZE + items_size * (consts::FONT_SIZE + 5.0),
-                60.0,
+                "Difficulty:x".len() as f32 * 10.0,
                 consts::FONT_SIZE,
             ),
             callback: Event::ChangeDifficulty,

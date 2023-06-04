@@ -83,9 +83,9 @@ impl App {
     ) -> Self {
         let play_state = PlayState::new(ctx, card_atlas, sprite_sheet, bg_image);
         let fade_state = FadeState::new(ctx);
-        sound_manager.bgm.set_volume(0.0); 
-        sound_manager.victory.set_volume(0.0); 
-        sound_manager.bgm.set_repeat(true); 
+        sound_manager.bgm.set_volume(0.0);
+        sound_manager.victory.set_volume(0.0);
+        sound_manager.bgm.set_repeat(true);
         Self {
             play_state,
             fade_state,
@@ -150,7 +150,6 @@ impl App {
                                 self.state_stack.push(State::FadeIn);
                                 self.state_stack.push(State::ClearPlay);
                                 self.state_stack.push(State::FadeOut);
-                                //self.state_stack.push(State::ClearPlay);
                             }
                             Event::Quit => ctx.request_quit(),
                             _ => {}
@@ -158,12 +157,16 @@ impl App {
                     }
                 }
                 State::FadeOut => {
-                    if !self.sound_manager.bgm.stopped() {
-                        self.sound_manager.bgm.stop(ctx)?;
-                    }
+                    // if !self.sound_manager.bgm.stopped() {
+                    //     self.sound_manager.bgm.stop(ctx)?;
+                    // }
 
-                    self.sound_manager.bgm.set_volume(self.sound_manager.bgm.volume() - dt / 2.0);
-                    self.sound_manager.victory.set_volume(self.sound_manager.victory.volume() - dt / 2.0);
+                    self.sound_manager
+                        .bgm
+                        .set_volume(self.sound_manager.bgm.volume() - dt / 2.0);
+                    self.sound_manager
+                        .victory
+                        .set_volume(self.sound_manager.victory.volume() - dt / 2.0);
                     if let Some(e) = self.fade_state.fade_out_update(dt) {
                         match e {
                             Event::Finished => {
@@ -176,10 +179,14 @@ impl App {
                 }
                 State::FadeIn => {
                     if self.sound_manager.bgm.stopped() {
-                        self.sound_manager.bgm.play(ctx).expect("Audio error");
+                        self.sound_manager.bgm.play(ctx)?;
                     }
-                    self.sound_manager.bgm.set_volume(self.sound_manager.bgm.volume() + dt / 2.0);
-                    self.sound_manager.victory.set_volume(self.sound_manager.victory.volume() + dt / 2.0);
+                    self.sound_manager
+                        .bgm
+                        .set_volume(self.sound_manager.bgm.volume() + dt / 2.0);
+                    self.sound_manager
+                        .victory
+                        .set_volume(self.sound_manager.victory.volume() + dt / 2.0);
                     if let Some(e) = self.fade_state.fade_in_update(dt) {
                         match e {
                             Event::Finished => {

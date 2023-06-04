@@ -22,13 +22,19 @@ impl TextBox{
         #[rustfmt::skip]
         let pixels =  [
             64, 64, 64, 255,
-            72, 72, 72, 255, 
+            68, 68, 68 ,255,
+            72, 72, 72, 255,
+            76, 76, 76, 255,
             80, 80, 80, 255,
+            84, 84, 84, 255,
             88, 88, 88, 255,
+            92, 92, 92, 255,
+            96, 96, 96, 255,
+            96, 96, 96, 255,
             96, 96, 96, 255,
             96, 96, 96, 255
         ];
-        let image = Image::from_pixels(ctx, &pixels, wgpu::TextureFormat::Rgba8UnormSrgb, 6, 1); 
+        let image = Image::from_pixels(ctx, &pixels, wgpu::TextureFormat::Rgba8UnormSrgb, 12, 1); 
         let border_light = Image::from_solid(ctx, 1, (110, 110, 110).into());
         let border_dark = Image::from_solid(ctx, 1, (52, 52, 52).into());
         let border_outline = Image::from_solid(ctx, 1, (22, 32, 34).into());
@@ -67,7 +73,7 @@ impl TextBox{
                 .scale([self.rect.size().x + 4.0, self.rect.size().y + 4.0])
                 .dest([self.pos[0] - 4.0, self.pos[1] - 4.0]),
         );
-        let scale = [self.rect.size().x / 6.0, self.rect.size().y];
+        let scale = [self.rect.size().x / self.image.width() as f32, self.rect.size().y];
         canvas.draw(
             &self.image,
             DrawParam::default().scale(scale).dest(self.pos),
