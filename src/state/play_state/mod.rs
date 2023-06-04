@@ -193,7 +193,7 @@ impl PlayState {
                 }
                 Event::ChangeDifficulty => {
                     let curr = self.play.opponent.difficulty();
-                    let d = if curr >= 5 { 1 } else { curr + 1 };
+                    let d = if curr >= 3 { 1 } else { curr + 1 };
                     self.play.opponent.set_difficulty(d);
                     return Some(Event::PlaySound(Sfx::Select));
                 }
