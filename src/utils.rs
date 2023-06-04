@@ -12,8 +12,8 @@ pub enum Rule {
 }
 
 impl Rule {
-    pub fn iterator() -> impl Iterator<Item = &'static Rule> {
-        use Rule::*;
+    pub fn iterator() -> impl Iterator<Item = &'static Self> {
+        use Rule::{Elemental, Open, Plus, Random, Same, SuddenDeath, Wall};
         [Open, Elemental, Random, Same, Wall, Plus, SuddenDeath].iter()
     }
 }

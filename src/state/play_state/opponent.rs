@@ -37,7 +37,7 @@ impl Opponent {
     }
 
     pub fn set_difficulty(&mut self, value: usize) {
-        self.ai.diffuculty(value)
+        self.ai.diffuculty(value);
     }
 
     pub fn clear(&mut self) {

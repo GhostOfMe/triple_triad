@@ -241,8 +241,8 @@ impl Board {
             None, None, None
         ];
         let board_offset = [
-            (consts::WINDOW_DIMENSIONS[0] - consts::CARD_SIZE[0] * 3.0) / 2.0,
-            (consts::WINDOW_DIMENSIONS[1] - consts::CARD_SIZE[1] * 3.0) / 2.0,
+            consts::CARD_SIZE[0].mul_add(-3.0, consts::WINDOW_DIMENSIONS[0]) / 2.0,
+            consts::CARD_SIZE[1].mul_add(-3.0, consts::WINDOW_DIMENSIONS[1]) / 2.0,
         ];
         let hitboxes = core::array::from_fn(|i| {
             let i_small = i16::try_from(i).expect("Value is too big! {i}");

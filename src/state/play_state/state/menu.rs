@@ -78,7 +78,7 @@ impl Menu {
                 disabled: true,
                 rect: Rect {
                     x: MENU_BG_POS[0] + 25.0,
-                    y: 20.0 + consts::FONT_SIZE + f32::from(i_small) * (consts::FONT_SIZE + 5.0),
+                    y: f32::from(i_small).mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                     w: label.len() as f32 * 10.0,
                     h: consts::FONT_SIZE,
                 },
@@ -93,7 +93,7 @@ impl Menu {
             disabled: false,
             rect: Rect::new(
                 MENU_BG_POS[0] + 10.0,
-                20.0 + consts::FONT_SIZE + items_size * (consts::FONT_SIZE + 5.0),
+                items_size.mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                 "Difficulty:x".len() as f32 * 10.0,
                 consts::FONT_SIZE,
             ),
@@ -109,7 +109,7 @@ impl Menu {
             disabled: false,
             rect: Rect::new(
                 MENU_BG_POS[0] + 10.0,
-                20.0 + consts::FONT_SIZE + items_size * (consts::FONT_SIZE + 5.0),
+                items_size.mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                 60.0,
                 consts::FONT_SIZE,
             ),
@@ -126,8 +126,8 @@ impl Menu {
                 label: format!("{i}"),
                 disabled: false,
                 rect: Rect::new(
-                    MENU_BG_POS[0] + 25.0 + 20.0 * f32::from(i_small),
-                    20.0 + consts::FONT_SIZE + items_size * (consts::FONT_SIZE + 5.0),
+                    20.0f32.mul_add(f32::from(i_small), MENU_BG_POS[0] + 25.0),
+                    items_size.mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                     20.0,
                     consts::FONT_SIZE,
                 ),
@@ -144,7 +144,7 @@ impl Menu {
             disabled: false,
             rect: Rect::new(
                 PLAY_BUTTON_POS[0],
-                20.0 + consts::FONT_SIZE + items_size * (consts::FONT_SIZE + 5.0),
+                items_size.mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                 60.0,
                 consts::FONT_SIZE,
             ),
@@ -156,7 +156,7 @@ impl Menu {
             disabled: false,
             rect: Rect::new(
                 QUIT_BUTTON_POS[0],
-                20.0 + consts::FONT_SIZE + (items_size + 1.0) * (consts::FONT_SIZE + 5.0),
+                (items_size + 1.0).mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                 60.0,
                 consts::FONT_SIZE,
             ),
@@ -165,7 +165,7 @@ impl Menu {
 
         items_size += 2.0;
 
-        let box_height = items_size * (consts::FONT_SIZE + 5.0) + 50.0;
+        let box_height = items_size.mul_add(consts::FONT_SIZE + 5.0, 50.0);
 
         let box_x_pos = (consts::WINDOW_DIMENSIONS[0] - MENU_BG_DIMENSIONS[0]) / 2.0;
         let box_y_pos = (consts::WINDOW_DIMENSIONS[1] - box_height) / 2.0;
@@ -174,7 +174,7 @@ impl Menu {
         items.push(play_button);
         items.push(quit_button);
 
-        for item in items.iter_mut() {
+        for item in &mut items {
             item.rect.y += box_y_pos;
         }
 

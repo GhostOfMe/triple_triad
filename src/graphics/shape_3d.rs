@@ -1,7 +1,7 @@
 #![allow(unused_imports, dead_code)]
 use crevice::std140::AsStd140;
 use ggez::event;
-use ggez::glam::*;
+use ggez::glam::{Mat4, Vec3, u32};
 use ggez::graphics;
 use ggez::{Context, GameResult};
 use std::env;
@@ -21,8 +21,8 @@ struct Vertex {
 }
 
 impl Vertex {
-    fn new(p: [i8; 3], t: [i8; 2]) -> Vertex {
-        Vertex {
+    fn new(p: [i8; 3], t: [i8; 2]) -> Self {
+        Self {
             pos: [f32::from(p[0]), f32::from(p[1]), f32::from(p[2]), 1.0],
             tex_coord: [f32::from(t[0]), f32::from(t[1])],
         }
@@ -202,7 +202,7 @@ impl Shape {
                 });
 
         // Create 1-pixel blue texture.
-        let image = graphics::Image::from_solid(ctx, 1, graphics::Color::from_rgb_u32(0xe0e000));
+        let image = graphics::Image::from_solid(ctx, 1, graphics::Color::from_rgb_u32(0x00e0_e000));
 
         let sampler = ctx
             .gfx
@@ -254,7 +254,7 @@ impl Shape {
         let proj = Mat4::perspective_rh(f32::consts::PI / 4.0, 4.0 / 3.0, 1.0, 50.0);
         let transform = proj * view(x_offset);
 
-        Shape {
+        Self {
             frames: 0,
             transform: transform.into(),
             rotation: 0.0,

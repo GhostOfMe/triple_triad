@@ -53,7 +53,7 @@ impl Fade {
 
     pub fn fade_in_update(&mut self, dt: f32) -> Option<Event> {
         if !self.fade_in.active {
-            self.fade_in()
+            self.fade_in();
         }
         self.color.a = self.fade_in.tweener.move_by(dt);
         self.fade_in.active = !self.fade_in.tweener.is_finished();
