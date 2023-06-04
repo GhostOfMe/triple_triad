@@ -37,6 +37,7 @@ const SOUND_VICORY: &str = "/sfx/src_assets_sounds_victory.mp3";
 
 struct MainState {
     app: App,
+    shader: ggez::graphics::Shader,
     _card_atlas: Rc<CardAtlas>,
     _card_sprite_sheet: Rc<SpriteAtlas>,
 }
@@ -63,10 +64,15 @@ impl MainState {
             elem_instance_array,
             sound_manager
         );
+        let shader = ggez::graphics::ShaderBuilder::new()
+            .fragment_path("/crt_shader.glsl")
+            .build(&ctx.gfx)?;
+
         Ok(Self {
             _card_atlas: Rc::clone(&card_atlas),
             _card_sprite_sheet: Rc::clone(&card_sprite_sheet),
             app,
+            shader
         })
     }
 }
@@ -79,6 +85,7 @@ impl event::EventHandler<ggez::GameError> for MainState {
 
     fn draw(&mut self, ctx: &mut Context) -> GameResult {
         let mut canvas = Canvas::from_frame(ctx, Color::from([0.1, 0.2, 0.3, 1.0]));
+        canvas.set_shader(&self.shader.clone());
         canvas.set_sampler(Sampler::nearest_clamp());
         canvas.set_screen_coordinates(Rect {
             x: 0.0,
@@ -90,7 +97,6 @@ impl event::EventHandler<ggez::GameError> for MainState {
         self.app.draw(ctx, &mut canvas);
         canvas.finish(ctx)?;
         self.app.wgpu_shapes.draw(ctx);
-
         Ok(())
     }
 }
@@ -98,7 +104,7 @@ impl event::EventHandler<ggez::GameError> for MainState {
 pub fn main() -> GameResult {
     let resource_dir = std::path::PathBuf::from("./assets");
     let cb = ggez::ContextBuilder::new("Triple Triad", "ggez")
-        .window_mode(ggez::conf::WindowMode::default().transparent(true))
+        .window_mode(ggez::conf::WindowMode::default().transparent(true).resizable(false))
         .add_resource_path(resource_dir);
     let (mut ctx, event_loop) = cb.build()?;
     let bgm = audio::Source::new(&ctx, SOUND_BGM)?;
