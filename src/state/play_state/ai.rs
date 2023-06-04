@@ -260,10 +260,20 @@ impl BoardSimple {
             zip!(card_flipped, cards_flipped_same, cards_flipped_plus).enumerate()
         {
             if *same {
+                self.board[border_mask[i].unwrap()]
+                    .card
+                    .as_mut()
+                    .unwrap()
+                    .flip_suit();
                 self.check(border_mask[i].unwrap(), false);
                 continue;
             }
             if plus {
+                self.board[border_mask[i].unwrap()]
+                    .card
+                    .as_mut()
+                    .unwrap()
+                    .flip_suit();
                 self.check(border_mask[i].unwrap(), false);
                 continue;
             }
@@ -300,13 +310,13 @@ fn solve_recur(turn: Suit, board: &BoardSimple, depth: usize) -> (usize, usize) 
         return board.score();
     }
 
-    if board.red_hand.iter().flatten().count() == 0 {
-        return board.score();
-    }
+    // if board.red_hand.iter().flatten().count() == 0 {
+    //     return board.score();
+    // }
 
-    if board.blue_hand.iter().flatten().count() == 0 {
-        return board.score();
-    }
+    // if board.blue_hand.iter().flatten().count() == 0 {
+    //     return board.score();
+    // }
 
     let hand = match turn {
         Suit::Blue => &board.blue_hand,
