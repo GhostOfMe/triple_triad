@@ -7,7 +7,7 @@ use tween::{Linear, Tweener};
 
 use crate::{consts::WINDOW_DIMENSIONS, utils::Event};
 
-const DURATION: f32 = 2.0;
+pub const DURATION: f32 = 2.0;
 
 struct Tween {
     pub active: bool,

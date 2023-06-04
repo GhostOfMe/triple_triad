@@ -1,7 +1,7 @@
 use app::SoundManager;
 use ggez::{
     event,
-    audio::{self, SoundSource},
+    audio,
     graphics::{Canvas, Color, FontData, Image, InstanceArray, Rect, Sampler},
     Context, GameResult,
 };
@@ -73,7 +73,7 @@ impl MainState {
 
 impl event::EventHandler<ggez::GameError> for MainState {
     fn update(&mut self, ctx: &mut Context) -> GameResult {
-        self.app.update(ctx);
+        self.app.update(ctx)?;
         Ok(())
     }
 

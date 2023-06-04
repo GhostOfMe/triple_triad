@@ -79,10 +79,13 @@ impl App {
         bg_image: &Rc<Image>,
         array: InstanceArray,
         elem_array: InstanceArray,
-        sound_manager: SoundManager,
+        mut sound_manager: SoundManager,
     ) -> Self {
         let play_state = PlayState::new(ctx, card_atlas, sprite_sheet, bg_image);
         let fade_state = FadeState::new(ctx);
+        println!("{}", sound_manager.bgm.volume()); 
+        sound_manager.bgm.set_volume(0.0); 
+        sound_manager.victory.set_volume(0.0); 
         Self {
             play_state,
             fade_state,
@@ -158,6 +161,9 @@ impl App {
                     if !self.sound_manager.bgm.stopped() {
                         self.sound_manager.bgm.stop(ctx)?;
                     }
+
+                    self.sound_manager.bgm.set_volume(self.sound_manager.bgm.volume() - dt / 2.0);
+                    self.sound_manager.victory.set_volume(self.sound_manager.victory.volume() - dt / 2.0);
                     if let Some(e) = self.fade_state.fade_out_update(dt) {
                         match e {
                             Event::Finished => {
@@ -172,6 +178,8 @@ impl App {
                     if self.sound_manager.bgm.stopped() {
                         self.sound_manager.bgm.play(ctx).expect("Audio error");
                     }
+                    self.sound_manager.bgm.set_volume(self.sound_manager.bgm.volume() + dt / 2.0);
+                    self.sound_manager.victory.set_volume(self.sound_manager.victory.volume() + dt / 2.0);
                     if let Some(e) = self.fade_state.fade_in_update(dt) {
                         match e {
                             Event::Finished => {

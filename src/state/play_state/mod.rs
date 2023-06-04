@@ -2,7 +2,6 @@ use ggez::graphics::{Canvas, Image, InstanceArray};
 // use ggez::graphics::{DrawParam, Text};
 
 use ggez::Context;
-use rand::seq::IteratorRandom;
 use std::rc::Rc;
 
 use crate::core::DuelOutcome;
@@ -171,10 +170,13 @@ impl PlayState {
                         self.play.blue_hand = Hand::from_ids(
                             Suit::Blue,
                             true,
-                            &(0..110).choose_multiple(&mut rand::thread_rng(), 5),
+                            &self.play.opponent.new_hand(),
+                            // &(0..110).choose_multiple(&mut rand::thread_rng(), 5),
                             &self.play.card_atlas,
                             &self.play.sprite_sheet,
                         );
+                        self.state_stack.pop();
+                        return Some(Event::PlaySound(Sfx::Select));
                     }
 
                     self.play.wait_for_pick();
