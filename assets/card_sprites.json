@@ -1,0 +1,1540 @@
+{
+  "sprites": [
+    {
+      "filename": "card_sprites.png",
+      "id": 0,
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 1,
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 2,
+      "frame": {
+        "x": 0,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 3,
+      "frame": {
+        "x": 64,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 4,
+      "frame": {
+        "x": 0,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 5,
+      "frame": {
+        "x": 64,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 6,
+      "frame": {
+        "x": 0,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 7,
+      "frame": {
+        "x": 64,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 8,
+      "frame": {
+        "x": 128,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 9,
+      "frame": {
+        "x": 192,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 10,
+      "frame": {
+        "x": 128,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 11,
+      "frame": {
+        "x": 192,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 12,
+      "frame": {
+        "x": 128,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 13,
+      "frame": {
+        "x": 192,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 14,
+      "frame": {
+        "x": 128,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 15,
+      "frame": {
+        "x": 192,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 16,
+      "frame": {
+        "x": 256,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 17,
+      "frame": {
+        "x": 320,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 18,
+      "frame": {
+        "x": 256,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 19,
+      "frame": {
+        "x": 320,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 20,
+      "frame": {
+        "x": 256,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 21,
+      "frame": {
+        "x": 320,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 22,
+      "frame": {
+        "x": 256,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 23,
+      "frame": {
+        "x": 320,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 24,
+      "frame": {
+        "x": 384,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 26,
+      "frame": {
+        "x": 448,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 26,
+      "frame": {
+        "x": 384,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 27,
+      "frame": {
+        "x": 448,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 28,
+      "frame": {
+        "x": 384,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 29,
+      "frame": {
+        "x": 448,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 30,
+      "frame": {
+        "x": 384,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 31,
+      "frame": {
+        "x": 448,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 32,
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 33,
+      "frame": {
+        "x": 576,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 34,
+      "frame": {
+        "x": 512,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 35,
+      "frame": {
+        "x": 576,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 36,
+      "frame": {
+        "x": 512,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 37,
+      "frame": {
+        "x": 576,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 38,
+      "frame": {
+        "x": 512,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 39,
+      "frame": {
+        "x": 576,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 40,
+      "frame": {
+        "x": 640,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 41,
+      "frame": {
+        "x": 704,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 42,
+      "frame": {
+        "x": 640,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 43,
+      "frame": {
+        "x": 704,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 44,
+      "frame": {
+        "x": 640,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 45,
+      "frame": {
+        "x": 704,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 46,
+      "frame": {
+        "x": 640,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 47,
+      "frame": {
+        "x": 704,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 48,
+      "frame": {
+        "x": 768,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 49,
+      "frame": {
+        "x": 832,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 50,
+      "frame": {
+        "x": 768,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 51,
+      "frame": {
+        "x": 832,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 52,
+      "frame": {
+        "x": 768,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 53,
+      "frame": {
+        "x": 832,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 54,
+      "frame": {
+        "x": 768,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 55,
+      "frame": {
+        "x": 832,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 56,
+      "frame": {
+        "x": 896,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 57,
+      "frame": {
+        "x": 960,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 58,
+      "frame": {
+        "x": 896,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 59,
+      "frame": {
+        "x": 960,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 60,
+      "frame": {
+        "x": 896,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 61,
+      "frame": {
+        "x": 960,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 62,
+      "frame": {
+        "x": 896,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 63,
+      "frame": {
+        "x": 960,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 64,
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 65,
+      "frame": {
+        "x": 1088,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 66,
+      "frame": {
+        "x": 1024,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 67,
+      "frame": {
+        "x": 1088,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 68,
+      "frame": {
+        "x": 1024,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 69,
+      "frame": {
+        "x": 1088,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 70,
+      "frame": {
+        "x": 1024,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 71,
+      "frame": {
+        "x": 1088,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 72,
+      "frame": {
+        "x": 1152,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 73,
+      "frame": {
+        "x": 1216,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 74,
+      "frame": {
+        "x": 1152,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 75,
+      "frame": {
+        "x": 1216,
+        "y": 62,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 76,
+      "frame": {
+        "x": 1152,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 77,
+      "frame": {
+        "x": 1216,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 78,
+      "frame": {
+        "x": 1152,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 79,
+      "frame": {
+        "x": 1216,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 80,
+      "frame": {
+        "x": 1280,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 81,
+      "frame": {
+        "x": 1344,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 82,
+      "frame": {
+        "x": 1280,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 83,
+      "frame": {
+        "x": 1344,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 84,
+      "frame": {
+        "x": 1280,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 85,
+      "frame": {
+        "x": 1344,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 86,
+      "frame": {
+        "x": 1280,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 87,
+      "frame": {
+        "x": 1344,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 88,
+      "frame": {
+        "x": 1408,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 89,
+      "frame": {
+        "x": 1472,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 90,
+      "frame": {
+        "x": 1408,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 91,
+      "frame": {
+        "x": 1472,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 92,
+      "frame": {
+        "x": 1408,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 93,
+      "frame": {
+        "x": 1472,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 94,
+      "frame": {
+        "x": 1408,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 95,
+      "frame": {
+        "x": 1472,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 96,
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 97,
+      "frame": {
+        "x": 1600,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 98,
+      "frame": {
+        "x": 1536,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 99,
+      "frame": {
+        "x": 1600,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 100,
+      "frame": {
+        "x": 1536,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 101,
+      "frame": {
+        "x": 1600,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 102,
+      "frame": {
+        "x": 1536,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 103,
+      "frame": {
+        "x": 1600,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 104,
+      "frame": {
+        "x": 1664,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 105,
+      "frame": {
+        "x": 1728,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 106,
+      "frame": {
+        "x": 1664,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 107,
+      "frame": {
+        "x": 1728,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 108,
+      "frame": {
+        "x": 1664,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 109,
+      "frame": {
+        "x": 1728,
+        "y": 128,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 110,
+      "frame": {
+        "x": 1664,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 111,
+      "frame": {
+        "x": 1738,
+        "y": 192,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 112,
+      "frame": {
+        "x": 1792,
+        "y": 0,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 113,
+      "frame": {
+        "x": 1792,
+        "y": 64,
+        "h": 64,
+        "w": 64
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 114,
+      "frame": {
+        "x": 1792,
+        "y": 127,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 115,
+      "frame": {
+        "x": 1808,
+        "y": 127,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 116,
+      "frame": {
+        "x": 1824,
+        "y": 127,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 117,
+      "frame": {
+        "x": 1840,
+        "y": 127,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 118,
+      "frame": {
+        "x": 1792,
+        "y": 143,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 119,
+      "frame": {
+        "x": 1808,
+        "y": 143,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 120,
+      "frame": {
+        "x": 1824,
+        "y": 143,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 121,
+      "frame": {
+        "x": 1840,
+        "y": 143,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 122,
+      "frame": {
+        "x": 1792,
+        "y": 159,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 123,
+      "frame": {
+        "x": 1808,
+        "y": 159,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 124,
+      "frame": {
+        "x": 1824,
+        "y": 159,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 125,
+      "frame": {
+        "x": 1728,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 126,
+      "frame": {
+        "x": 1760,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 127,
+      "frame": {
+        "x": 1728,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 128,
+      "frame": {
+        "x": 1760,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 129,
+      "frame": {
+        "x": 1792,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 130,
+      "frame": {
+        "x": 1824,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 131,
+      "frame": {
+        "x": 1792,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 132,
+      "frame": {
+        "x": 1824,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 133,
+      "frame": {
+        "x": 1856,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 134,
+      "frame": {
+        "x": 1888,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 135,
+      "frame": {
+        "x": 1920,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 136,
+      "frame": {
+        "x": 1952,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 137,
+      "frame": {
+        "x": 1984,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 138,
+      "frame": {
+        "x": 1856,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 139,
+      "frame": {
+        "x": 1888,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 140,
+      "frame": {
+        "x": 1920,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 141,
+      "frame": {
+        "x": 1952,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 142,
+      "frame": {
+        "x": 1984,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 143,
+      "frame": {
+        "x": 2016,
+        "y": 192,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 144,
+      "frame": {
+        "x": 2016,
+        "y": 224,
+        "h": 32,
+        "w": 32
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 145,
+      "frame": {
+        "x": 1856,
+        "y": 0,
+        "h": 64,
+        "w": 160
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 146,
+      "frame": {
+        "x": 1856,
+        "y": 64,
+        "h": 64,
+        "w": 192
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 147,
+      "frame": {
+        "x": 1856,
+        "y": 128,
+        "h": 64,
+        "w": 224
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 148,
+      "frame": {
+        "x": 2112,
+        "y": 0,
+        "h": 64,
+        "w": 640
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 149,
+      "frame": {
+        "x": 2112,
+        "y": 64,
+        "h": 64,
+        "w": 596
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 150,
+      "frame": {
+        "x": 2112,
+        "y": 128,
+        "h": 64,
+        "w": 320
+      }
+    },
+      {
+      "filename": "card_sprites.png",
+      "id": 151,
+      "frame": {
+        "x": 1792,
+        "y": 176,
+        "h": 16,
+        "w": 16
+      }
+    },
+    {
+      "filename": "card_sprites.png",
+      "id": 152,
+      "frame": {
+        "x": 1808,
+        "y": 176,
+        "h": 16,
+        "w": 16
+      }
+    }
+  ],
+  "meta": {
+    "size": {
+      "w": 2432,
+      "h": 256
+    }
+  }
+}
