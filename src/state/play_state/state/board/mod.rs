@@ -1,4 +1,4 @@
-use ggez::graphics::{Canvas, DrawParam, Image, InstanceArray, PxScale, Rect, Text, TextFragment};
+use ggez::graphics::{Canvas, Color, DrawParam, Image, InstanceArray, PxScale, Rect, Text, TextFragment};
 use ggez::Context;
 
 use mint::Point2;
@@ -193,6 +193,15 @@ impl Tooltip {
         ]
         .into();
         self.bg_rect.draw(canvas);
+        
+        let shadow = Text::new(TextFragment {
+            text: self.label.clone().unwrap(),
+            color: Some(Color::from_rgb(50, 50, 50)),
+            font: Some("pixel font".into()),
+            scale: Some(PxScale::from(consts::FONT_SIZE)),
+        });
+
+        canvas.draw(&shadow, [label_pos.x + 2.0, label_pos.y + 2.0]);
         canvas.draw(&label, DrawParam::default().dest(label_pos));
     }
 }

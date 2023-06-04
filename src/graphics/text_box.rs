@@ -16,9 +16,19 @@ impl TextBox{
         ctx: &mut Context,
         pos: impl Into<[f32; 2]>,
         size: impl Into<Vector2<f32>>,
-        color: impl Into<Color>,
+        _color: impl Into<Color>,
     ) -> Self {
-        let image = Image::from_solid(ctx, 1, color.into());
+        //let image = Image::from_solid(ctx, 1, color.into());
+        #[rustfmt::skip]
+        let pixels =  [
+            64, 64, 64, 255,
+            72, 72, 72, 255, 
+            80, 80, 80, 255,
+            88, 88, 88, 255,
+            96, 96, 96, 255,
+            96, 96, 96, 255
+        ];
+        let image = Image::from_pixels(ctx, &pixels, wgpu::TextureFormat::Rgba8UnormSrgb, 6, 1); 
         let border_light = Image::from_solid(ctx, 1, (110, 110, 110).into());
         let border_dark = Image::from_solid(ctx, 1, (52, 52, 52).into());
         let border_outline = Image::from_solid(ctx, 1, (22, 32, 34).into());
@@ -46,21 +56,21 @@ impl TextBox{
                 .dest([self.pos[0] - 5.0, self.pos[1] - 5.0]),
         );
         canvas.draw(
-            &self.border_light,
-            DrawParam::default()
-                .scale([self.rect.size().x + 8.0, self.rect.size().y + 8.0])
-                .dest([self.pos[0] - 4.0, self.pos[1] - 4.0]),
-        );
-        canvas.draw(
             &self.border_dark,
             DrawParam::default()
-                .scale([self.rect.size().x + 4.0, self.rect.size().y + 4.0])
-                .dest([self.pos[0], self.pos[1]]),
+                .scale([self.rect.size().x + 8.0, self.rect.size().y + 4.0])
+                .dest([self.pos[0] - 4.0, self.pos[1]]),
         );
-
+        canvas.draw(
+            &self.border_light,
+            DrawParam::default()
+                .scale([self.rect.size().x + 4.0, self.rect.size().y + 4.0])
+                .dest([self.pos[0] - 4.0, self.pos[1] - 4.0]),
+        );
+        let scale = [self.rect.size().x / 6.0, self.rect.size().y];
         canvas.draw(
             &self.image,
-            DrawParam::default().scale(self.rect.size()).dest(self.pos),
+            DrawParam::default().scale(scale).dest(self.pos),
         );
     }
 }

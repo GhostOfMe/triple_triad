@@ -83,9 +83,9 @@ impl App {
     ) -> Self {
         let play_state = PlayState::new(ctx, card_atlas, sprite_sheet, bg_image);
         let fade_state = FadeState::new(ctx);
-        println!("{}", sound_manager.bgm.volume()); 
         sound_manager.bgm.set_volume(0.0); 
         sound_manager.victory.set_volume(0.0); 
+        sound_manager.bgm.set_repeat(true); 
         Self {
             play_state,
             fade_state,

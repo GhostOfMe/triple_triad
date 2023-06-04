@@ -32,6 +32,14 @@ impl MenuItem {
             font: Some("pixel font".into()),
             scale: Some(PxScale::from(consts::FONT_SIZE)),
         });
+        
+        let shadow = Text::new(TextFragment {
+            text: self.label.clone(),
+            color: Some(Color::from_rgb(50, 50, 50)),
+            font: Some("pixel font".into()),
+            scale: Some(PxScale::from(consts::FONT_SIZE)),
+        });
+        canvas.draw(&shadow, [self.rect.x + 2.0, self.rect.y + 2.0]);
         canvas.draw(&label, [self.rect.x, self.rect.y]);
     }
 }
