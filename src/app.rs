@@ -163,10 +163,10 @@ impl App {
 
                     self.sound_manager
                         .bgm
-                        .set_volume(self.sound_manager.bgm.volume() - dt / 2.0);
+                        .set_volume(self.sound_manager.bgm.volume() - dt / 4.0);
                     self.sound_manager
                         .victory
-                        .set_volume(self.sound_manager.victory.volume() - dt / 2.0);
+                        .set_volume(self.sound_manager.victory.volume() - dt / 4.0);
                     if let Some(e) = self.fade_state.fade_out_update(dt) {
                         match e {
                             Event::Finished => {
@@ -183,10 +183,10 @@ impl App {
                     }
                     self.sound_manager
                         .bgm
-                        .set_volume(self.sound_manager.bgm.volume() + dt / 2.0);
+                        .set_volume(self.sound_manager.bgm.volume() + dt / 4.0);
                     self.sound_manager
                         .victory
-                        .set_volume(self.sound_manager.victory.volume() + dt / 2.0);
+                        .set_volume(self.sound_manager.victory.volume() + dt / 4.0);
                     if let Some(e) = self.fade_state.fade_in_update(dt) {
                         match e {
                             Event::Finished => {
