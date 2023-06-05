@@ -77,7 +77,6 @@ impl Distribution<Element> for Standard {
 #[serde_as]
 #[derive(Deserialize, Debug)]
 pub struct CardAtlas {
-    //#[serde_as(as = "Vec<(_)>")]
     pub cards: Vec<Card>,
 }
 
@@ -91,7 +90,6 @@ impl CardAtlas {
         use std::fs::File;
         use std::io::BufReader;
         let path = std::path::PathBuf::from(filename);
-        println!("Loading: {path:?}");
         let file = File::open(path).expect("Couldn't find the card atlas file");
         let buf_reader = BufReader::new(file);
         serde_json::from_reader(buf_reader).expect("Couldn't create the card atlas")

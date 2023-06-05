@@ -82,7 +82,6 @@ impl Atlas {
         use std::fs::File;
         use std::io::BufReader;
         let path = std::path::PathBuf::from(filename);
-        println!("Loading {path:?}");
         let file = File::open(path).expect("Couldn't find the texture_atlas file");
         let buf_reader = BufReader::new(file);
         serde_json::from_reader(buf_reader).expect("Couldn't create texture atlas")
@@ -109,26 +108,3 @@ impl Atlas {
         )
     }
 }
-
-// self.sprites
-//     .iter()
-//     .find(|d| d.id == sprite_name)
-//     .map_or_else(
-//         || {
-//             println!("Sprite name: {sprite_name}");
-//             unimplemented!("Not handling failure to find sprite");
-//         },
-//         |sprite_data| {
-//             Sprite::new(
-//                 graphics::Rect::fraction(
-//                     sprite_data.frame.x as f32,
-//                     sprite_data.frame.y as f32,
-//                     sprite_data.frame.w as f32,
-//                     sprite_data.frame.h as f32,
-//                     &atlas_rect,
-//                 ),
-//                 sprite_data.frame.w as f32,
-//                 sprite_data.frame.h as f32,
-//             )
-//         },
-//     )
