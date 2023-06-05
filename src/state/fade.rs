@@ -74,35 +74,12 @@ impl Fade {
         None
     }
 
-    // pub fn update(&mut self, dt: f32) -> Option<Event> {
-    //     match (self.fade_in.active, self.fade_out.active) {
-    //         (true, true) => unreachable!(),
-    //         (false, false) => {}
-    //         (true, _) => {
-    //             self.color.a = self.fade_in.tweener.move_by(dt);
-    //             self.fade_in.active = !self.fade_in.tweener.is_finished();
-    //             if !self.fade_in.active {
-    //                 return Some(Event::Finished);
-    //             }
-    //         }
-    //         (_, true) => {
-    //             self.color.a = self.fade_out.tweener.move_by(dt);
-    //             self.fade_out.active = !self.fade_out.tweener.is_finished();
-    //             if !self.fade_out.active {
-    //                 return Some(Event::Finished);
-    //             }
-    //         }
-    //     }
-
-    //     None
-    // }
-
     pub fn draw(&self, canvas: &mut Canvas) {
         canvas.draw(
             &self.color_rect,
             DrawParam::default()
                 .scale(WINDOW_DIMENSIONS)
                 .color(self.color),
-        )
+        );
     }
 }
