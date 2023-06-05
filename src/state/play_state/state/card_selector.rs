@@ -157,12 +157,7 @@ impl PickMenu {
         let items = vec![
             None, None, None, None, None, None, None, None, None, None, None,
         ];
-        let bg_rect = TextBox::new(
-            ctx,
-            CARD_SELECT_VIEW_POS,
-            CARD_SELECT_DIMENSIONS,
-            (64, 64, 64),
-        );
+        let bg_rect = TextBox::new(ctx, CARD_SELECT_VIEW_POS, CARD_SELECT_DIMENSIONS);
         let mut res = Self {
             active: true,
             page: 0,
@@ -323,7 +318,7 @@ impl CardSelect {
             active: true,
         }
     }
-    pub fn init(&mut self){
+    pub fn init(&mut self) {
         self.card_menu.count = 0;
     }
     pub fn draw(&self, ctx: &mut Context, canvas: &mut Canvas, array: &mut InstanceArray) {

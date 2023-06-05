@@ -32,7 +32,7 @@ impl MenuItem {
             font: Some("pixel font".into()),
             scale: Some(PxScale::from(consts::FONT_SIZE)),
         });
-        
+
         let shadow = Text::new(TextFragment {
             text: self.label.clone(),
             color: Some(Color::from_rgb(50, 50, 50)),
@@ -78,7 +78,8 @@ impl Menu {
                 disabled: true,
                 rect: Rect {
                     x: MENU_BG_POS[0] + 25.0,
-                    y: f32::from(i_small).mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
+                    y: f32::from(i_small)
+                        .mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
                     w: label.len() as f32 * 10.0,
                     h: consts::FONT_SIZE,
                 },
@@ -183,7 +184,6 @@ impl Menu {
                 ctx,
                 [box_x_pos, box_y_pos],
                 [MENU_BG_DIMENSIONS[0], box_height],
-                (64, 64, 64),
             ),
             items,
         }
@@ -204,14 +204,19 @@ impl Menu {
         self.items[6].disabled = !rules.plus;
         self.items[7].disabled = !rules.sudden_death;
     }
-    fn update_cards_aviable(&mut self, cards_aviable: &[bool; 10]){
-        for (i, val) in cards_aviable.iter().enumerate(){
-            self.items[i+ 10].disabled = !val;
+    fn update_cards_aviable(&mut self, cards_aviable: &[bool; 10]) {
+        for (i, val) in cards_aviable.iter().enumerate() {
+            self.items[i + 10].disabled = !val;
         }
-
     }
 
-    pub fn update(&mut self, difficulty: usize, rules: &Rules, cards_aviable: &[bool; 10], ctx: &mut Context) -> Option<Event> {
+    pub fn update(
+        &mut self,
+        difficulty: usize,
+        rules: &Rules,
+        cards_aviable: &[bool; 10],
+        ctx: &mut Context,
+    ) -> Option<Event> {
         //let _rect = Rect::new(consts::BOARD_OFFSET[0], consts::BOARD_OFFSET[1], 240., 300.);
         self.update_rules(rules);
         self.update_difficulty(difficulty);

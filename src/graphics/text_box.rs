@@ -1,4 +1,4 @@
-use ggez::graphics::{Rect, Image, Color, DrawParam, Canvas};
+use ggez::graphics::{Rect, Image, DrawParam, Canvas};
 use ggez::Context;
 use mint::Vector2;
 
@@ -16,7 +16,6 @@ impl TextBox{
         ctx: &mut Context,
         pos: impl Into<[f32; 2]>,
         size: impl Into<Vector2<f32>>,
-        _color: impl Into<Color>,
     ) -> Self {
         //let image = Image::from_solid(ctx, 1, color.into());
         #[rustfmt::skip]
@@ -73,7 +72,8 @@ impl TextBox{
                 .scale([self.rect.size().x + 4.0, self.rect.size().y + 4.0])
                 .dest([self.pos[0] - 4.0, self.pos[1] - 4.0]),
         );
-        let scale = [self.rect.size().x / self.image.width() as f32, self.rect.size().y];
+        let width_small = u16::try_from(self.image.width()).expect("Value is too big");
+        let scale = [self.rect.size().x / f32::from(width_small), self.rect.size().y];
         canvas.draw(
             &self.image,
             DrawParam::default().scale(scale).dest(self.pos),

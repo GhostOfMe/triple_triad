@@ -145,7 +145,7 @@ impl Tooltip {
         ]
         .into();
 
-        let bg_rect = TextBox::new(ctx, pos, [200.0, 65.0], (64, 64, 64));
+        let bg_rect = TextBox::new(ctx, pos, [200.0, 65.0]);
 
         Self {
             active: false,

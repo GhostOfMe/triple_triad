@@ -171,7 +171,7 @@ impl Hand {
         panic!("Hand is full!");
     }
     
-    pub fn focus(&self) -> Option<usize>{
+    pub const fn focus(&self) -> Option<usize>{
         self.focus
     }
 

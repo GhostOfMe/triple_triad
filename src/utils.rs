@@ -42,7 +42,7 @@ pub enum Sfx {
     Flip,
 }
 
-pub fn border_mask(n: usize) -> [Option<usize>; 4] {
+pub const fn border_mask(n: usize) -> [Option<usize>; 4] {
     [
         if n >= 3 { Some(n - 3) } else { None },
         if n % 3 <= 1 { Some(n + 1) } else { None },

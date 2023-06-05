@@ -29,10 +29,10 @@ impl Opponent {
 
         self.card_enabled[n] = !self.card_enabled[n];
     }
-    pub fn difficulty(&self) -> usize {
+    pub const fn difficulty(&self) -> usize {
         self.ai.diffuculty
     }
-    pub fn cards(&self) -> [bool; 10] {
+    pub const fn cards(&self) -> [bool; 10] {
         self.card_enabled
     }
 
