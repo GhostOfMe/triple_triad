@@ -199,8 +199,6 @@ impl BoardSimple {
                         3 => Some(card.rank.r),
                         _ => unreachable!(),
                     };
-                } else {
-                    return None;
                 }
             }
             Some(10)
@@ -512,7 +510,7 @@ impl Opponent {
                 let to = self.maybe_move.as_ref().unwrap().to;
                 red_hand.set_focus(from);
                 self.timer = TIMEOUT;
-                self.actions.pop(); 
+                self.actions.pop();
                 self.actions.push(Action::Put(from, to));
                 return Some(AiEvent::Focus);
             }

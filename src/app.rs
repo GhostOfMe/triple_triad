@@ -103,7 +103,7 @@ impl App {
                 State::InitPlay | State::ClearPlay => {}
                 State::Play => {
                     self.play_state
-                        .draw(ctx, canvas, &mut self.array, &mut self.elem_array)
+                        .draw(ctx, canvas, &mut self.array, &mut self.elem_array);
                 }
                 State::FadeIn | State::FadeOut => self.fade_state.draw(canvas),
             }
@@ -130,19 +130,19 @@ impl App {
                         match e {
                             Event::PlaySound(Sfx::Fanfare) => {
                                 self.sound_manager.bgm.stop(ctx)?;
-                                self.sound_manager.victory.play(ctx)?
+                                self.sound_manager.victory.play(ctx)?;
                             }
                             Event::PlaySound(Sfx::Flip) => {
-                                self.sound_manager.flip_card.play_detached(ctx)?
+                                self.sound_manager.flip_card.play_detached(ctx)?;
                             }
                             Event::PlaySound(Sfx::Move) => {
-                                self.sound_manager.move_card.play_detached(ctx)?
+                                self.sound_manager.move_card.play_detached(ctx)?;
                             }
                             Event::PlaySound(Sfx::Select) => {
-                                self.sound_manager.select.play_detached(ctx)?
+                                self.sound_manager.select.play_detached(ctx)?;
                             }
                             Event::PlaySound(Sfx::Cancel) => {
-                                self.sound_manager.cancel.play_detached(ctx)?
+                                self.sound_manager.cancel.play_detached(ctx)?;
                             }
 
                             Event::Finished => {

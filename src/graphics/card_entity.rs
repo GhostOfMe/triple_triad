@@ -655,7 +655,7 @@ impl CardEntity {
                 self.flip_color();
             }
             if flip_face {
-                self.flipped = !self.flipped
+                self.flipped = !self.flipped;
             }
         }
     }

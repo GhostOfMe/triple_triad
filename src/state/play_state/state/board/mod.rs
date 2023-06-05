@@ -136,7 +136,6 @@ struct Tooltip {
 }
 impl Tooltip {
     pub fn new(ctx: &mut Context, card_artlas: &Rc<CardAtlas>) -> Self {
-        let card_atlas = Rc::clone(card_artlas);
         let bg_width = 200.0;
         let bg_height = 65.0;
         let pos: Point2<f32> = [
@@ -154,7 +153,7 @@ impl Tooltip {
             bg_rect,
             card_prev: None,
             card_curr: None,
-            card_atlas,
+            card_atlas: Rc::clone(card_artlas)
         }
     }
 
@@ -630,8 +629,6 @@ impl Board {
                         3 => Some(card.rank_right()),
                         _ => unreachable!(),
                     };
-                } else {
-                    return None;
                 }
             }
             Some(10)

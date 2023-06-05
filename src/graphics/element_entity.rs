@@ -28,7 +28,7 @@ pub struct ElementEntity {
     frame_duration: f32,
 }
 impl ElementEntity {
-    pub fn new(element: Element, pos: Point2<f32>) -> Self {
+    pub const fn new(element: Element, pos: Point2<f32>) -> Self {
         let frames = match element {
             Element::Fire => 4.0,
             Element::Ice => 2.0,

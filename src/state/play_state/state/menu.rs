@@ -72,7 +72,6 @@ impl Menu {
 
         for (i, (label, rule)) in labels.iter().zip(Rule::iterator()).enumerate() {
             let i_small = u8::try_from(i).expect("Value is too big!");
-
             let item = MenuItem {
                 label: String::from(*label),
                 disabled: true,
@@ -80,7 +79,7 @@ impl Menu {
                     x: MENU_BG_POS[0] + 25.0,
                     y: f32::from(i_small)
                         .mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
-                    w: label.len() as f32 * 10.0,
+                    w: u16::try_from(label.len()).expect("Value is too big") as f32 * 10.0,
                     h: consts::FONT_SIZE,
                 },
                 callback: Event::ChangeRule(*rule),
@@ -95,7 +94,7 @@ impl Menu {
             rect: Rect::new(
                 MENU_BG_POS[0] + 10.0,
                 items_size.mul_add(consts::FONT_SIZE + 5.0, 20.0 + consts::FONT_SIZE),
-                "Difficulty:x".len() as f32 * 10.0,
+                u16::try_from("Difficulty:x".len()).expect("Value is too big") as f32 * 10.0,
                 consts::FONT_SIZE,
             ),
             callback: Event::ChangeDifficulty,
