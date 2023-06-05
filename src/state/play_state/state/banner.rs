@@ -59,8 +59,8 @@ impl Banner {
                 .src(rect)
                 .scale([consts::SCALE_FACTOR, consts::SCALE_FACTOR])
                 .dest([
-                    (consts::WINDOW_DIMENSIONS[0] - sprite.width) / 2.0,
-                    (consts::WINDOW_DIMENSIONS[1] - sprite.height) / 2.0,
+                    (consts::WINDOW_DIMENSIONS[0] - sprite.width * consts::SCALE_FACTOR) / 2.0,
+                    (consts::WINDOW_DIMENSIONS[1] - sprite.height * consts::SCALE_FACTOR) / 2.0,
                 ]),
         );
         canvas.draw(array, [0.0, 0.0]);
