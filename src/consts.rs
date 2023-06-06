@@ -8,7 +8,6 @@ pub const SCALE_FACTOR: f32 = CARD_SIZE[1] / SPRITE_SIZE[1];
 pub const TOP_MARGIN: f32 = 90.0;
 pub const LEFT_MARGIN: f32 = 45.0;
 
-
 pub const RIGHT_HAND_OFFSET: [f32; 2] = [
     WINDOW_DIMENSIONS[0] - CARD_SIZE[0] - LEFT_MARGIN,
     TOP_MARGIN,

@@ -9,6 +9,8 @@ use crate::core::DuelOutcome;
 use crate::graphics::sprite::Atlas as SpriteAtlas;
 use crate::utils::{Event, Sfx};
 
+const SCALE_FACTOR: f32 = consts::SCALE_FACTOR * 0.75;
+
 pub struct Banner {
     _timer: f32,
     started: bool,
@@ -57,10 +59,10 @@ impl Banner {
         array.push(
             DrawParam::default()
                 .src(rect)
-                .scale([consts::SCALE_FACTOR, consts::SCALE_FACTOR])
+                .scale([SCALE_FACTOR, SCALE_FACTOR])
                 .dest([
-                    (consts::WINDOW_DIMENSIONS[0] - sprite.width * consts::SCALE_FACTOR) / 2.0,
-                    (consts::WINDOW_DIMENSIONS[1] - sprite.height * consts::SCALE_FACTOR) / 2.0,
+                    (consts::WINDOW_DIMENSIONS[0] - sprite.width * SCALE_FACTOR) / 2.0,
+                    (consts::WINDOW_DIMENSIONS[1] - sprite.height * SCALE_FACTOR) / 2.0,
                 ]),
         );
         canvas.draw(array, [0.0, 0.0]);
