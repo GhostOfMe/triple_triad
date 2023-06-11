@@ -1,4 +1,6 @@
-use ggez::graphics::{Canvas, Color, DrawParam, Image, InstanceArray, PxScale, Rect, Text, TextFragment};
+use ggez::graphics::{
+    Canvas, Color, DrawParam, Image, InstanceArray, PxScale, Rect, Text, TextFragment,
+};
 use ggez::Context;
 
 use mint::Point2;
@@ -153,7 +155,7 @@ impl Tooltip {
             bg_rect,
             card_prev: None,
             card_curr: None,
-            card_atlas: Rc::clone(card_artlas)
+            card_atlas: Rc::clone(card_artlas),
         }
     }
 
@@ -192,7 +194,7 @@ impl Tooltip {
         ]
         .into();
         self.bg_rect.draw(canvas);
-        
+
         let shadow = Text::new(TextFragment {
             text: self.label.clone().unwrap(),
             color: Some(Color::from_rgb(50, 50, 50)),
@@ -629,6 +631,8 @@ impl Board {
                         3 => Some(card.rank_right()),
                         _ => unreachable!(),
                     };
+                } else {
+                    return None;
                 }
             }
             Some(10)
@@ -893,13 +897,13 @@ impl Board {
                     // }
 
                     let mut no_focus = true;
-                    let mut play_sound = false; 
+                    let mut play_sound = false;
                     for i in (0..5).rev() {
                         let card_hitbox = self.blue_hand.card_rect(i);
-                        if card_hitbox.contains(mouse_pos) { 
-                            if self.blue_hand.focus() != Some(i){
+                        if card_hitbox.contains(mouse_pos) {
+                            if self.blue_hand.focus() != Some(i) {
                                 play_sound = true;
-                            } 
+                            }
                             self.blue_hand.set_focus(i);
                             no_focus = false;
                             if is_left_pressed {
@@ -915,10 +919,9 @@ impl Board {
                     if no_focus {
                         self.blue_hand.reset_foucus();
                     }
-                    if play_sound{
+                    if play_sound {
                         return Some(Event::PlaySound(Sfx::Move));
                     }
-                    
                 }
                 TurnPhase::Place => {
                     if !(is_left_pressed || is_right_pressed) {
@@ -1021,7 +1024,7 @@ impl Board {
                 if !flipped_cards.is_empty() {
                     return Some(Event::PlaySound(Sfx::Flip));
                 }
-                
+
                 if !self.flip_animation_finished() {
                     return None;
                 }
@@ -1031,7 +1034,6 @@ impl Board {
                 if self.empty_cells_iter().next().is_none() {
                     self.state_stack.pop();
                 }
-
             }
             State::ComboCheck => {
                 if !self.flip_animation_finished() {

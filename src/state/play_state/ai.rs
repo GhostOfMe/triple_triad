@@ -1,3 +1,4 @@
+use std::fmt::Debug;
 use std::sync::{Arc, Mutex};
 use std::thread;
 
@@ -15,6 +16,29 @@ const TIMEOUT: f32 = 1.0;
 struct Cell {
     card: Option<CardSimple>,
     element: Option<Element>,
+}
+
+impl std::fmt::Debug for BoardSimple {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        writeln!(f, "Red Hand:")?;
+        for c in &self.red_hand {
+            writeln!(f, "\t{:?}", c)?;
+        }
+        writeln!(f,)?;
+        writeln!(f, "Blue Hand:")?;
+        for c in &self.red_hand {
+            writeln!(f, "\t{:?}", c)?;
+        }
+        writeln!(f,)?;
+        writeln!(f, "Board:")?;
+        for c in &self.board {
+            writeln!(f, "\t{:?}", c)?;
+        }
+        writeln!(f,)?;
+        writeln!(f, "{:?}", self.rules)?;
+
+        Ok(())
+    }
 }
 
 #[derive(Debug, Clone, Copy)]
@@ -83,7 +107,7 @@ impl CardSimple {
     }
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone)]
 struct BoardSimple {
     pub red_hand: [Option<CardSimple>; 5],
     pub blue_hand: [Option<CardSimple>; 5],
@@ -199,6 +223,8 @@ impl BoardSimple {
                         3 => Some(card.rank.r),
                         _ => unreachable!(),
                     };
+                } else {
+                    return None;
                 }
             }
             Some(10)
