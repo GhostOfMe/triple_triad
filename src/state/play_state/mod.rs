@@ -171,11 +171,9 @@ impl PlayState {
                             Suit::Blue,
                             true,
                             &self.play.opponent.new_hand(),
-                            // &(0..110).choose_multiple(&mut rand::thread_rng(), 5),
                             &self.play.card_atlas,
                             &self.play.sprite_sheet,
                         );
-                        self.state_stack.pop();
                         return Some(Event::PlaySound(Sfx::Select));
                     }
 

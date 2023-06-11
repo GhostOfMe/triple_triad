@@ -296,6 +296,7 @@ impl Board {
     pub fn first_turn(&mut self, p: Suit) {
         self.state_stack.clear();
         self.state_stack.push(State::Finish);
+        println!("First: {:?}", p); 
         match p {
             Suit::Red => self.state_stack.push(State::RedPlayerTurn(TurnPhase::Pick)),
             Suit::Blue => self
