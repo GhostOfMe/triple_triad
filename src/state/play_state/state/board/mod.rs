@@ -866,6 +866,14 @@ impl Board {
                     h: 0.0,
                 },
                 |card| {
+                    if card.flipped {
+                        return Rect {
+                            x: 0.0,
+                            y: 0.0,
+                            w: 0.0,
+                            h: 0.0,
+                        };
+                    }
                     let card_pos = card.pos;
                     Rect {
                         x: card_pos.x,
