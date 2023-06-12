@@ -321,7 +321,7 @@ impl Board {
         self.red_hand = Hand::empty(Suit::Blue, &self.card_atlas, &self.sprite_sheet);
     }
 
-    pub fn deal_sunnden_death(&mut self) {
+    pub fn deal_sudden_death(&mut self) {
         for maybe_card in &mut self.playing_field.cards {
             match maybe_card.as_ref().unwrap().controller {
                 Suit::Red => self.red_hand.add_card_entity(maybe_card.take().unwrap()),

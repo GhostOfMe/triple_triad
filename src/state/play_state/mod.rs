@@ -109,7 +109,7 @@ impl PlayState {
                     if let Some(e) = self.play.update(ctx) {
                         match e {
                             Event::GameSummary(DuelOutcome::Draw, true) => {
-                                self.play.deal_sunnden_death();
+                                self.play.deal_sudden_death();
                                 self.state_stack.push(State::CoinFlip);
                                 return None;
                             }
